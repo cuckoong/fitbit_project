@@ -145,7 +145,7 @@ counts, distance traveled, and calories burned, which are the mean and sd values
 7. Run the test file to check the etl pipeline.
     * `pytest test/test_etl.py`
 8. Run the quality check file to check the quality of the data.
-    * `python test/test_quality_check.py`
+    * `pytest test/test_quality_check.py`
 
 
 ## Complete Project Write Up
