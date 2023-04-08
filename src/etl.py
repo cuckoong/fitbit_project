@@ -329,7 +329,7 @@ def pipline():
 
     # personality
     personality = spark.read.csv(
-        "../data/scored_surveys/personality.csv", header=True, inferSchema=True
+        "data/scored_surveys/personality.csv", header=True, inferSchema=True
     ).drop("_c0")
 
     # extract fitbit data
@@ -351,7 +351,7 @@ def pipline():
         "panas_id", monotonically_increasing_id()
     )
     save_data(
-        panas_table, num=4, saved_path="../data/processed/panas_table.parquet"
+        panas_table, num=4, saved_path="data/processed/panas_table.parquet"
     )
 
     # transform personality data
@@ -373,7 +373,7 @@ def pipline():
     save_data(
         personality_table,
         num=4,
-        saved_path="../data/processed/personality_table.parquet",
+        saved_path="data/processed/personality_table.parquet",
     )
 
     # transform fitbit data
@@ -383,7 +383,7 @@ def pipline():
     save_data(
         fitbit_table,
         num=4,
-        saved_path="../data/processed/fitbit_table.parquet",
+        saved_path="data/processed/fitbit_table.parquet",
     )
 
     # fitbit_fact table (fact table)
@@ -415,7 +415,7 @@ def pipline():
 
     fitbit_fact_table = spark.sql(query)
     save_data(
-        fitbit_fact_table, num=4, saved_path="../data/processed/facts.parquet"
+        fitbit_fact_table, num=4, saved_path="data/processed/facts.parquet"
     )
 
 
