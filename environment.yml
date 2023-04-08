@@ -1,0 +1,12 @@
+name: fitbit_project
+channels:
+  - conda-forge
+dependencies:
+  - numpy=1.24.2
+  - pandas=1.5.3
+  - pip=23.0
+  - python=3.10.9
+  - pytest=7.2.1
+  - pip=23.0
+  - pip:
+    - pyspark==3.3.1
