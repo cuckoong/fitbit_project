@@ -10,7 +10,7 @@ import logging
 import pytest
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType
-from src.processing import (
+from src.etl import (
     drop_null_columns,
     extract_time,
     update_schema_nullable,

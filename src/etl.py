@@ -237,6 +237,9 @@ def personality_processing(personality, spark_session=None):
         "intellect",
     )
 
+    # drop duplicates and null rows
+    df = clean_data(df)
+
     df = update_schema_nullable(df, spark_session=spark_session)
     return df
 
