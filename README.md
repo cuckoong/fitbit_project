@@ -148,7 +148,7 @@ counts, distance traveled, and calories burned, which are the mean and sd values
     * `python test/test_quality_check.py`
 
 
-### Complete Project Write Up
+## Complete Project Write Up
 1. Clearly state the rationale for the choice of tools and technologies for the project.
     * Apache Spark is used to do all the data processing and data model creation. Since Spark is able to handle data 
   transformation, even when the data is scaled up to lots of terabytes.
